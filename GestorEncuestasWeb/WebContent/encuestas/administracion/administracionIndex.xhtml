@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+	<body>
+		<!-- ADMINISTRADOR RECUPERA DATOS DEL USUARIO_REGISTRADO -->
+		Administrador: #{userBean.loginName}<br />	
+		Nombre: #{userBean.user.nombre}<br />
+		Apellido: #{userBean.user.apellido1}<br />
+		
+		<h:selectOneMenu id="menu">
+			<f:selectItems itemValue="#{tareasAdministracion.tarea}"></f:selectItems>
+		</h:selectOneMenu> <br></br>
+	
+	<a href="/GestorEncuestasWeb/encuestas/administracion/inicioEdicionEncuesta.jsf">Ir a alta encuesta</a><br/>
+
+	</body>
+</html>

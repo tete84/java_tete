@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+	<h:body>
+	<f:view locale="#{facesContext.externalContext.requestLocale}">  <!--Aplicar Idioma, para aplicar el banco de msgs-->
+			#{msgs.tratamientoHombre}#{userBean.user.nombreCompleto}
+			<h:outputFormat value="#{msgs.mensajeBienvenida}" >
+				<f:param value="#{userBean.user.nombreCompleto}"></f:param>
+				<f:param value="#{userBean.user.domicilio.domicilioCompleto}"></f:param>
+			 </h:outputFormat> 
+	</f:view>
+	
+	<a href="/GestorEncuestasWeb/encuestas/administracion/administracionIndex.jsf">Volver administracion</a>
+	</h:body>
+</html>
